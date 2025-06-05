@@ -444,13 +444,13 @@
     background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
     background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
     background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
   .home-section .home-menu {
     min-height: 700px;
     border-radius: 12px;
     position: relative;
-    bottom: -200px;
+    bottom: -100px;
     background: #fff;
     padding: 30px;
     box-shadow: 0px 20px 80px 0px rgb(153 153 153 / 30%);
@@ -475,20 +475,127 @@
     -ms-flex-align: start;
     align-items: flex-start;
   }
-  /* .home-section .banner .banner-content .media .d-flex {
-    padding-right: 80px;
+  .experiences-section {
+    padding: 60px 0;
+    background: #f8f9fa;
   }
-  .home-section .banner .banner-content .media .d-flex img {
-    width: 668px;
-    height: 690px;
-    vertical-align: middle;
-    border-style: none;
-    border-radius: 10px;
-  } */
-  /* .home-section .banner .banner-content .media .media-body {
-    vertical-align: middle;
-    align-self: center;
-  } */
+  .section-title {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #22223b;
+    letter-spacing: 1px;
+  }
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .timeline:before {
+    content: '';
+    position: absolute;
+    left: 32px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #c9ada7;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .timeline-icon {
+    width: 75px;
+    height: 70px;
+    background: #22223b;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 64px;
+    font-size: 2rem;
+    margin-right: 30px;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  }
+  .timeline-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px 28px;
+    box-shadow: 0 4px 20px rgba(34,34,59,0.06);
+    position: relative;
+    width: 100%;
+  }
+  .timeline-date {
+    color: #9a8c98;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .timeline-content h3 {
+    font-size: 1.3rem;
+    color: #22223b;
+    margin-bottom: 4px;
+  }
+  .timeline-content h4 {
+    font-size: 1.1rem;
+    color: #4a4e69;
+    margin-bottom: 12px;
+  }
+  .position {
+    font-weight: 400;
+    color: #9a8c98;
+    font-size: 1rem;
+    margin-left: 8px;
+  }
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    list-style: none;
+  }
+  .skills li {
+    background: #f2e9e4;
+    color: #22223b;
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 0.95rem;
+  }
+  .desc {
+    margin-bottom: 10px;
+    color: #22223b;
+  }
+  .achievements, .projects ul {
+    margin: 0 0 8px 0;
+    padding-left: 18px;
+    font-size: 1rem;
+    color: #4a4e69;
+  }
+  .project-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+  @media (max-width: 650px) {
+    .timeline-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .timeline-icon {
+      margin-bottom: 12px;
+      margin-right: 0;
+    }
+    .timeline:before {
+      left: 16px;
+    }
+  }
   .personal h6 {
     font-size: 14px;
     font-family: "Roboto", sans-serif;
@@ -591,26 +698,27 @@
     border: 1px solid #eeeeee;
     border-radius: 5px;
   }
-  .part-2 .about .progress-br {
+  .progress {
+    background: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 10px;
     margin-bottom: 20px;
-    border: 1px solid #eeeeee;
-    padding: 5px;
-    border-radius: 10px;
   }
-  .part-2 .about .progress {
-    border: 1px #777777;
-    height: 10px;
-    border-radius: 10px;
-    background: #e8e8e8;
+  
+  .progress-bar {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    height: 100%;
+    animation: growBar 2s ease-in-out;
   }
-  .part-2 .about .progress-bar {
-    transition: width 0.6s ease;
-    background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-    transition: width 0.6s ease;
-    height: 10px;
-    border-radius: 5px;
-    vertical-align: middle;
-    align-self: center;
+  
+  @keyframes growBar {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
   .mytabs_area {
     background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
@@ -727,6 +835,9 @@
   .media-body {
     -ms-flex: 1;
     flex: 1;
+  }
+  .project{
+    font-weight: bold;
   }
   .tabs_inner .tab-content .tab-pane .list li .media .media-body h4 {
     color: #fff;
